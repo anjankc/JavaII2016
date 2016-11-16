@@ -1,0 +1,18 @@
+public class Airplane{
+
+private String planeID;
+private int planeCapacity;
+private HashMap <String, int> plane;
+
+public Airplane(String planeID, int planeCapacity){
+this.planeID=planeID;
+this.planeCapacity=planeCapacity;
+plane=new HashMap<String, int>();
+}
+
+public void addAirplane(){
+plane.put(this.planeID, this.planeCapacity);
+}
+
+
+}

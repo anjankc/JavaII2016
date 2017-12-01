@@ -1,0 +1,45 @@
+
+// Printing squares 
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+        printStars(5); // Uses two while loop
+        System.out.println("***Alternative way****");
+        printPlus(5); // Uses two for loop
+
+    }
+
+    public static void printStars(int times) {
+        int j = 0;
+        while (j < times) {
+            int i = 0;
+            while (i < times) {
+                System.out.print("*");
+                i++;
+            }
+            System.out.println("");
+            j++;
+        }
+    }
+
+    public static void printPlus(int times) {
+        int i = 0;
+        int j = 0;
+        for (i = 0; i < times;) {
+            for (j = 0; j <times; j++) {
+                System.out.print("+");
+                
+            }
+            System.out.println("");
+            i++;
+
+        }
+
+    }
+
+}

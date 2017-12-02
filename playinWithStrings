@@ -1,0 +1,49 @@
+
+// Strings
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Printing front and end part of the word given the separating intger
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a word:");
+        String word = reader.nextLine();
+        System.out.print("Lenght of the first part:");
+        int length = Integer.parseInt(reader.nextLine());
+
+        System.out.println("First part Result:" + word.substring(0,length)); // subrtring(inclusive, exclusive index)
+        System.out.println("End part Result:"+ word.substring(word.length()-length)); 
+        
+        // reading word inside word
+        System.out.print("Type the first word:");       
+        String mainWord = reader.nextLine();
+        System.out.print("Type the second word:");
+        String searchFor = reader.nextLine();
+        
+        int index=mainWord.indexOf(searchFor);
+        
+        if(index!=-1) {
+            System.out.println("The word '"+searchFor +"'is found in word '"+mainWord+"'.");
+        } else {
+        System.out.println("The word '"+searchFor +"'is not found in word '"+mainWord+"'.");
+        }
+        
+        // reversing the string i.e word palindrome
+        System.out.print("Type a word or sentance: ");
+        String toReverse= reader.nextLine();
+        String reverseResult=" ";
+        int lenStr=toReverse.length();
+        System.out.println(lenStr);
+        while (lenStr>0){
+        reverseResult=reverseResult+toReverse.charAt(lenStr-1);
+        lenStr--;                
+        }
+        System.out.println("Reverse of String: "+reverseResult);
+       
+        
+    }
+
+}

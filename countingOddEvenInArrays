@@ -1,0 +1,63 @@
+
+// Strings
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> number = new ArrayList<Integer>();
+
+        number.add(1);
+        number.add(5);
+        number.add(2);
+        number.add(7);
+        number.add(13);
+        number.add(-31);
+        number.add(100);
+
+        if (allPositive(number)) {
+            System.out.println("There is no negative numbers in the list");
+        } else {
+            System.out.println("There is negative number in the list");
+        }
+        System.out.println("Numbers of Even number in list is: " + evenNumbers(number));
+        System.out.println("Numbers of Even number in list is: " + oddNumbers(number));
+    }
+
+    public static boolean allPositive(ArrayList<Integer> number) {
+
+        for (int numberi : number) {
+            if (numberi < 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static int evenNumbers(ArrayList<Integer> number) {
+        int noCount = 0;
+
+        for (int numberi : number) {
+            if (numberi % 2 == 0) {
+                noCount++;
+            }
+        }
+
+        return noCount;
+    }
+
+    public static int oddNumbers(ArrayList<Integer> number) {
+        int noCount = 0;
+
+        for (int numberi : number) {
+            if (numberi % 2 != 0) {
+                noCount++;
+            }
+        }
+        return noCount;
+    }
+
+}

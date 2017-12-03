@@ -1,0 +1,58 @@
+
+// Strings
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> number = new ArrayList<Integer>();
+
+        number.add(1); // method 'add' adds the integer to end of the arraylist.
+        number.add(5);
+        number.add(-31);
+        number.add(7);
+        number.add(13);
+        number.add(-31);
+        number.add(100);
+
+        printArray(number);
+
+        System.out.println("******Methods of Arrays***********");
+        number.remove(Integer.valueOf(-31)); //removing the specific value but only removes one
+        number.remove(Integer.valueOf(-31)); // to remove second value
+        number.remove(0);  // remove the integer at position 0(or index 0)
+        System.out.println("");
+        printArray(number);
+
+        if (number.contains(100)) {   //method to check either the list contains certain number or not
+            System.out.println("The list contain the number 100\n");
+        }
+
+        System.out.println("Methods of Object Collections");
+        Collections.sort(number); // collections is object which uses method 'sort' to sort the arraylist in ascending order
+        System.out.println("**********Number in Ascending order*****");
+        printArray(number);
+
+        Collections.reverse(number);
+        System.out.println("******Reverse list Order******");
+        printArray(number);
+
+        Collections.shuffle(number);// Similar to 'sort', shuffle method is used to shuffle the numbers inside list
+        System.out.println("*******Shuffle list Order*******");
+        printArray(number);
+    }
+
+    public static void printArray(ArrayList<Integer> number) {
+
+        for (int numberi : number) {
+
+            System.out.println(numberi);
+
+        }
+
+    }
+
+}

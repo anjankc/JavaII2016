@@ -24,7 +24,6 @@ public class Main {
         number.add(100);
 
         //number.addAll(number1); // combining two arraylist with repeatition of numbers
-        
         // Combining two arraylist without repeationtion of number
         int i = 0;
         for (i = 0; i < number1.size(); i++) {
@@ -36,8 +35,14 @@ public class Main {
         printArray(number);
 
         System.out.println("******Methods of Arrays***********");
-        number.remove(Integer.valueOf(-31)); //removing the specific value but only removes one
-        number.remove(Integer.valueOf(-31)); // to remove second value
+       // number.remove(Integer.valueOf(-31)); //removing the specific value but only removes one
+       //number.remove(Integer.valueOf(-31)); // to remove second value
+        
+        //short cut to remove all the value using while loop
+        while (number.contains(Integer.valueOf(-31))){
+        number.remove(Integer.valueOf(-31));
+        }
+        
         number.remove(0);  // remove the integer at position 0(or index 0)
         System.out.println("");
         printArray(number);
